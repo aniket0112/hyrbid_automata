@@ -1,0 +1,12 @@
+dd_bot:
+  joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 10
+  left_wheel_controller:
+   type: effort_controllers/JointVelocityController
+   joint: left_wheel_joint
+   pid: {p: 01.000, i: 0.000, d: 0.000, i_clamp_min: -20,i_clamp_max: 20}
+  right_wheel_controller:
+   type: effort_controllers/JointVelocityController
+   joint: right_wheel_joint
+   pid: {p: 01.000, i: 0.000, d: 0.000, i_clamp_min: -10,i_clamp_max: 10}
