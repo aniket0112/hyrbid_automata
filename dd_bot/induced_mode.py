@@ -32,7 +32,7 @@ def readLaser(msg):
 	angle = []
 	for i in range(len(data)):
 		if data[i] != float('inf') and data[i] != -float('inf'):
-			angle.append(i*3.14/720-1.57)
+			angle.append(i*6.28/720-3.14)
 			mag.append(data[i])
 	laser_data.mag = mag
 	laser_data.angle = angle
@@ -49,5 +49,5 @@ while not rospy.is_shutdown():
 	(_,rpmLeft,rpmRight,distance) = HA.switch(currPosition,desiredPosition,laser_data)
 	pub_l.publish(rpmLeft)
 	pub_r.publish(rpmRight)
-	print(currPosition.x,currPosition.y)
+#	print(currPosition.x,currPosition.y)
 	r.sleep()
