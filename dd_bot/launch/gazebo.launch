@@ -5,7 +5,7 @@
   <param name="dd_bot/robot_description" command="$(find xacro)/xacro.py $(find dd_bot)/urdf/dd_bot.xacro"/>
   <node name="spawn_model" pkg="gazebo_ros" type="spawn_model" ns = "dd_bot" args="-param robot_description -urdf -model dd_bot" 
     output="screen" />
- <!-- <node name="spawn_obstacle" pkg="gazebo_ros" type="spawn_model" ns = "dd_bot" args="-file /home/crm/model_editor_models/wall/model.sdf -sdf -x 1 -Y 3.14 -model wall" output="screen" /> -->
+  <node name="spawn_obstacle" pkg="gazebo_ros" type="spawn_model" ns = "dd_bot" args="-file $(find dd_bot)/urdf/obstacle/model.sdf -sdf -model wall" output="screen" />
   <rosparam file="$(find dd_bot)/config/my_odom.yaml" command="load"/>
   <node name="control_spawner" pkg="controller_manager" type="spawner" respawn="false" ns="dd_bot"
 	output="screen" args="joint_state_controller right_wheel_controller left_wheel_controller"/>
