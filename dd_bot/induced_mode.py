@@ -18,14 +18,14 @@ currPosition = HA.Position(0,0,0)
 desiredPosition = HA.Position(5,5,0)											# Set desired coordinate in xy plane here
 laser_data = HA.laserSensor([],[],0)
 
-def readOdom(msg):																# Position Feedback
+def readOdom(msg):																# Position and heading Feedback
 	global currPosition
 	currPosition.x = msg.pose[1].position.x
 	currPosition.y = msg.pose[1].position.y
 	rot = msg.pose[1].orientation
 	(_,_,currPosition.yaw) = euler_from_quaternion([rot.x,rot.y,rot.z,rot.w])
 
-def readLaser(msg):																# Heading Feedback
+def readLaser(msg):																# Obstacle Heading Feedback
 	global laser_data
 	data = msg.ranges
 	mag = []

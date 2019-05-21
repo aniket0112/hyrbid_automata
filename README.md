@@ -1,5 +1,5 @@
 # hyrbid_automata
-HybridAutomata with Go To Goal, Obstacle Avoidance and Follow Wall modes governed by SlidingModeSwitch for Differentail Drive Robot in ROS Gazebo.
+HybridAutomata with Go To Goal, Obstacle Avoidance and Follow Wall modes governed by SlidingModeSwitch for Differential Drive Robot in ROS Gazebo.
 ![Image Not Found](/images/dd_bot.png)
 ## Getting started
 
