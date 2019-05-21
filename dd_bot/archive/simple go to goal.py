@@ -15,8 +15,8 @@ R = 0.05
 x = 0
 y = 0
 head = 0
-goal_x = 0
-goal_y = 0
+goal_x = 5
+goal_y = 5
 E = 0
 error_old = 0
 
@@ -36,7 +36,7 @@ def readLaser(msg):
 	angle = []
 	for i in range(len(data)):
 		if data[i] != float('inf') and data[i] != -float('inf'):
-			angle.append(i*180/720-90)
+			angle.append(i*6.28/720-3.14)
 	print(angle)
 
 controller = rospy.init_node('G2G_Controller',anonymous=True)
