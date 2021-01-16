@@ -27,6 +27,13 @@ If the rospackage location is not displayed, please contact the collaborators.
 *The folders ```urdf``` and ```config``` collectively constitute the model specifications for the physics engine of simulator. A good way to understand about editting them is following ROS Gazebo tutorials [here](http://gazebosim.org/tutorials) or follow up [my blog](https://medium.com/@aniket0112/twolinkman-3b326c1320eb) for a crashcourse
 *NOTE* : If anything is logged in red color while running any of the above commands, there has been some error. Contact collaborators in such case with the log messages.
 
+### Known issues
+* Could not load controller 'right_wheel_controller' because controller type 'effort_controllers/JointVelocityController' does not exist.
+Instal ros-control package for ros-melodic
+```sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers```
+* [REST.cc:205] Error in REST request
+Check this [Gazebo Answers thread](https://answers.gazebosim.org//question/25030/gazebo-error-restcc205-error-in-rest-request/)
+
 ## Built with
 * [SolidWorks](http://www.solidworks.in/Default.htm) - 3D CAD model
 * [ROS Meloidc](http://wiki.ros.org/melodic) - ROS control node
