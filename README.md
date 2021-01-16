@@ -28,10 +28,10 @@ If the rospackage location is not displayed, please contact the collaborators.
 *NOTE* : If anything is logged in red color while running any of the above commands, there has been some error. Contact collaborators in such case with the log messages.
 
 ### Known issues
-* Could not load controller 'right_wheel_controller' because controller type 'effort_controllers/JointVelocityController' does not exist.
-Instal ros-control package for ros-melodic
+* Could not load controller 'right_wheel_controller' because controller type 'effort_controllers/JointVelocityController' does not exist.  
+Instal ros-control package for ros-melodic  
 ```sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers```
-* [REST.cc:205] Error in REST request
+* [REST.cc:205] Error in REST request  
 Check this [Gazebo Answers thread](https://answers.gazebosim.org//question/25030/gazebo-error-restcc205-error-in-rest-request/)
 
 ## Built with
